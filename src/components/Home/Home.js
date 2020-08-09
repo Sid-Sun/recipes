@@ -18,7 +18,7 @@ export class Home extends PureComponent {
     }
 
     componentDidMount() {
-        axios.get("http://starlord.hackerearth.com/recipe").then((res) => {
+        axios.get("https://cors-anywhere.herokuapp.com/http://starlord.hackerearth.com/recipe").then((res) => {
             this.setState({
                 data: [...res.data],
                 searchedData: [...res.data],

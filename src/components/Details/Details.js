@@ -11,7 +11,7 @@ class Details extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://starlord.hackerearth.com/recipe").then((res) => {
+        axios.get("https://cors-anywhere.herokuapp.com/http://starlord.hackerearth.com/recipe").then((res) => {
             console.log(res)
             this.setState({
                 data: {...res.data[this.props.match.params.id]},
@@ -53,8 +53,8 @@ class Details extends Component {
                             </p> : ""
                         }
                     </Col>
-                </Row> : this.state.error ? <h1 className="text-center">Sorry, An error occurred</h1> :
-                    <h1 className="text-center">Loading..</h1>
+                </Row> : this.state.error ? <h1 className="text-center font-weight-light">Sorry, An error occurred</h1> :
+                    <h1 className="text-center font-weight-light">Loading..</h1>
                 }
             </Container>
         );
